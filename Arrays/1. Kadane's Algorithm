@@ -1,0 +1,26 @@
+Kadane's Algorithm
+------------------
+Given an array of N integers a1,a2,a3,....., aN find the maximum subarray(non-empty) sum of the given array.
+
+For example:
+Array A[] = [-1, 2, -2, 5, 7, -3, 1]
+Maximum subarray sum -> 12
+Subarray(0-Based indexed) from index 1 to 4 -> [2, -2, 5, 7] and subarray(0-Based indexed) from
+index 3 to 4 -> [5, 7] have sum 12.
+
+Traverse the array. At each index i, we can either add that element or discard. If adding that element leads to a
+negative sum, then newly start the subarray from it's next array element.
+
+MaxSubarray.java
+---------------
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int currentSum = 0, maxSum = Integer.MIN_VALUE, n = nums.length;
+        for(int i = 0; i< n; i++) {
+            currentSum = currentSum + nums[i];
+            maxSum = Math.max(maxSum, currentSum);
+            if(currentSum < 0) currentSum=0;
+        }
+        return maxSum;
+    }
+}
