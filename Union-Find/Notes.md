@@ -9,4 +9,5 @@
 - ... and many more
 
 Percolation,
+
 ![Percolation](<Screenshot from 2023-10-14 11-42-26.png>)
