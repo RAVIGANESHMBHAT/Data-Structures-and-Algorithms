@@ -3,6 +3,7 @@
 // union(2,3) -> add a path from node 2 to node 3
 // isConnected(1,3) -> returns boolean whether from node 1 can we reach node 3
 
+// the weighted quick-union solution
 class ImprovedQuickUnionUF {
     private int[] ids;
     private int[] sz;
@@ -18,7 +19,7 @@ class ImprovedQuickUnionUF {
 
     private int root(int p) {
         while(p != ids[p]) {
-            // ids[p] = ids[ids[p]]; // Path compression
+            // ids[p] = ids[ids[p]]; // Path compression (more optimized)
             p = ids[p];
         }
         return p;
@@ -42,7 +43,7 @@ class ImprovedQuickUnionUF {
     }
 }
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World");
     }
