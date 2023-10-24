@@ -3,10 +3,10 @@
 // union(2,3) -> add a path from node 2 to node 3
 // isConnected(1,3) -> returns boolean whether from node 1 can we reach node 3
 
-public class QuickUnionUF {
+public class QuickUnion {
     private int[] ids;
 
-    public QuickUnionUF(int n) {
+    public QuickUnion(int n) {
         ids = new int[n];
         for(int i = 0; i < n; i++) {
             ids[i] = i;
