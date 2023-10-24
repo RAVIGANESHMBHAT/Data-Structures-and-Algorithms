@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TreeNode {
+class TreeNode {
     int data;
     TreeNode left;
     TreeNode right;
@@ -12,24 +12,31 @@ public class TreeNode {
     }
 }
 
-class TreeCreationUsingLinkedList {
+public class TreeCreationUsingLinkedList {
     TreeNode root;
 
-    static TreeNode create() {
+    TreeNode create() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter value:")
+        System.out.println("Enter value:");
         int data = sc.nextInt();
-        if(data == -1) {
+        if (data == -1) {
+            sc.close();
             return null;
         }
         root = create();
-        System.out.println("Enter left child of "+ data);
+        System.out.println("Enter left child of " + data);
         root.left = create();
-        System.out.println("Enter right child of "+ data);
+        System.out.println("Enter right child of " + data);
         root.right = create();
+
+        sc.close();
+
+        return root;
     }
 
     public static void main() {
-        TreeNode root = create();
+        TreeCreationUsingLinkedList t = new TreeCreationUsingLinkedList();
+        TreeNode root = t.create();
+        System.out.println(root);
     }
 }
