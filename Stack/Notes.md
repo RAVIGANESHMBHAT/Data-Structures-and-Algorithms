@@ -18,3 +18,10 @@ Here, the amortized cost of adding to a stack is,
 N -> 1 array access per push
 
 (2 + 4 + 8 + ... + N) -> k array accesses to double to size k
+
+
+##### Stack Iterators
+
+![Stack Iterator LinkedList Implementation](<Screenshot from 2023-10-25 07-05-00.png>)
+
+![Stack Iterator Array Implementation](<Screenshot from 2023-10-25 07-07-02.png>)
