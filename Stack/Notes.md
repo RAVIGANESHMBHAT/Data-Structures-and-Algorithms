@@ -25,3 +25,12 @@ N -> 1 array access per push
 ![Stack Iterator LinkedList Implementation](<Screenshot from 2023-10-25 07-05-00.png>)
 
 ![Stack Iterator Array Implementation](<Screenshot from 2023-10-25 07-07-02.png>)
+
+
+### Stack Applications
+- Parsing in a compiler
+- JVM
+- Undo in a word processor
+- Back button in a web browser
+- PostScript language for printers
+- Implementing function calls in a compiler
