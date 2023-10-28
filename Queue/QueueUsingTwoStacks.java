@@ -27,8 +27,8 @@ public class QueueUsingTwoStacks<T> {
         T item = null;
         if (!popStack.isEmpty()) {
             item = popStack.pop();
+            size--;
         }
-        size--;
         return item;
     }
 
