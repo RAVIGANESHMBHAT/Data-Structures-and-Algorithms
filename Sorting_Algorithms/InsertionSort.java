@@ -1,9 +1,9 @@
 package Sorting_Algorithms;
 
-public class SelectionSort {
+public class InsertionSort {
     Integer[] arr;
 
-    SelectionSort(int n) {
+    InsertionSort(int n) {
         arr = new Integer[n];
     }
 
@@ -25,17 +25,15 @@ public class SelectionSort {
         arr[index2] = temp;
     }
 
-    void selectionSort() {
+    void sort() {
         int arrLen = arr.length;
-        for (int i = 0; i < arrLen - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < arrLen; j++) {
-                if (arr[j] < arr[minIndex]) {
-                    minIndex = j;
+        for (int i = 1; i < arrLen; i++) {
+            for (int j = i; j > 0; j--) {
+                if (arr[j] < arr[j - 1]) {
+                    swap(j, j - 1);
+                } else {
+                    break;
                 }
-            }
-            if (i != minIndex) {
-                swap(i, minIndex);
             }
         }
     }
@@ -50,7 +48,7 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        SelectionSort ss = new SelectionSort(5);
+        InsertionSort ss = new InsertionSort(5);
         ss.insert(0, 10);
         ss.insert(1, 4);
         ss.insert(2, 1);
@@ -59,7 +57,7 @@ public class SelectionSort {
 
         ss.print();
 
-        ss.selectionSort();
+        ss.sort();
 
         ss.print();
 
