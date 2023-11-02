@@ -21,5 +21,10 @@ If the array is already sorted, then it doesn't do swapping in any case and it i
 
 If the array is in descending order, then it is the worst case.
 
+__Time complexity__: `O(n^2)` in worst case and `O(n)` in best case.
+
 __Proposition :__ For partially-sorted array, insertion sort runs in linear time.
 __Proof :__ Number of exchanges equals the number of inversions.
+
+
+## Shell Sort
