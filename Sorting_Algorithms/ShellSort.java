@@ -4,18 +4,18 @@ public class ShellSort<T extends Comparable<T>> {
     public void sort(T[] a) {
         int N = a.length;
 
-        int h = 1;
-        while (h < N / 3)
-            h = 3 * h + 1;
+        int gap = 1;
+        while (gap < N / 3)
+            gap = 3 * gap + 1;
 
-        while (h >= 1) {
-            // h-sort the array
-            for (int i = h; i < N; i++) {
-                for (int j = i; j >= h && less(a[j], a[j - h]); j -= h) {
-                    exch(a, j, j - h);
+        while (gap >= 1) {
+            // Perform insertion sort on sub-arrays with the given gap
+            for (int i = gap; i < N; i++) {
+                for (int j = i; j >= gap && less(a[j], a[j - gap]); j -= gap) {
+                    exch(a, j, j - gap);
                 }
             }
-            h = h / 3;
+            gap /= 3;
         }
     }
 
@@ -33,12 +33,19 @@ public class ShellSort<T extends Comparable<T>> {
         // Create an array of a type that implements Comparable (e.g., Integer).
         Integer[] arrayToSort = { 5, 2, 8, 1, 4, 7 };
 
+        System.out.println("Array Before Sorting:");
+        for (Integer num : arrayToSort) {
+            System.out.print(num + " ");
+        }
+        System.out.println("\n");
+
         // Create an instance of ShellSort for Integer type.
         ShellSort<Integer> integerSorter = new ShellSort<>();
 
         // Call the sort method to sort the array.
         integerSorter.sort(arrayToSort);
 
+        System.out.println("Sorted Array:");
         // Print the sorted array.
         for (Integer num : arrayToSort) {
             System.out.print(num + " ");
