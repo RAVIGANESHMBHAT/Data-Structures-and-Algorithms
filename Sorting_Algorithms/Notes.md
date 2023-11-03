@@ -28,3 +28,11 @@ __Proof :__ Number of exchanges equals the number of inversions.
 
 
 ## Shell Sort
+Move entries more than one position at a time by h-sorting the array.
+
+It is inserting sort with stride length `h`.
+
+In simple, create multiple groups sequentially of length h, and apply insertion sort to each group.
+
+__Time complexity__: O(n<sup>3/2</sup>)  in worst case when `h=3X+1`.
+ 
