@@ -100,3 +100,14 @@ private void sortHelper(T[] a, T[] aux, int lo, int hi) {
 ```
 
 ![Alt text](<Screenshot from 2023-11-05 20-41-54.png>)
+
+
+## Bottom-Up Merge Sort
+- Pass through array, merging sub-arrays of size 1.
+- Repeat for sub-arrays of size 2, 4, 8, 16, ...
+
+Here no recursion is needed.
+
+__Time Complexity__ = `N lgN`.
+
+
